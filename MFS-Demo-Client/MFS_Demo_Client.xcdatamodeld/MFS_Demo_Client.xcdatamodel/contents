@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="Car" representedClassName=".Car" syncable="YES">
+        <attribute name="brand" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="make"/>
+            </userInfo>
+        </attribute>
+        <attribute name="carId" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="horsepower" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="horsePower"/>
+            </userInfo>
+        </attribute>
+        <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="vendor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vendor" inverseName="cars" inverseEntity="Vendor" syncable="YES"/>
+        <userInfo>
+            <entry key="relatedByAttribute" value="carId"/>
+        </userInfo>
+    </entity>
+    <entity name="Vendor" representedClassName=".Vendor" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vendorId" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="id"/>
+            </userInfo>
+        </attribute>
+        <relationship name="cars" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Car" inverseName="vendor" inverseEntity="Car" syncable="YES">
+            <userInfo>
+                <entry key="relatedByAttribute" value="carId"/>
+            </userInfo>
+        </relationship>
+        <userInfo>
+            <entry key="relatedByAttribute" value="vendorId"/>
+        </userInfo>
+    </entity>
+    <elements>
+        <element name="Car" positionX="144" positionY="-7" width="128" height="28"/>
+        <element name="Vendor" positionX="-101" positionY="20" width="128" height="28"/>
+    </elements>
+</model>
