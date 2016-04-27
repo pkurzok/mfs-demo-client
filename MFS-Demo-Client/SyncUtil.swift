@@ -29,7 +29,7 @@ class SyncUtil: NSObject {
         })
     }
     
-    func createCarForVendor(vendor: Vendor, brand: String, model: String, color: String, horsepower: String, year: String) {
+    func createCarForVendor(vendor: Vendor, brand: String, model: String, color: String, horsepower: Int, year: Int) {
         
         var car: Car?
         
@@ -44,8 +44,8 @@ class SyncUtil: NSObject {
                 car.brand = brand
                 car.model = model
                 car.color = color
-                car.horsepower = Int(horsepower)
-                car.year = Int(year)
+                car.horsepower = horsepower
+                car.year = year
                 
                 if let vendorInBgContext = vendor.MR_inContext(context) {
                     vendorInBgContext.addCar(car)

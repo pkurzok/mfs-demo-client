@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (3.3.1)
+  - Eureka (1.5.0)
   - KeychainAccess (2.3.5)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
@@ -8,12 +9,14 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3)
-  - KeychainAccess
+  - Eureka (~> 1.5)
+  - KeychainAccess (~> 2)
   - MagicalRecord (~> 2)
   - Reachability (~> 3)
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  Eureka: 2fb37bb50569c62ee3284689d5b7aca694b040e0
   KeychainAccess: e283c1981a6c5655e1984cd411c6faf16fa165ae
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96

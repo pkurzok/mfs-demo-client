@@ -25,6 +25,7 @@
 		998FB5F81CA051B100C49714 /* Vendor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998FB5F51CA051B100C49714 /* Vendor+CoreDataProperties.swift */; };
 		998FB5F91CA051B100C49714 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998FB5F61CA051B100C49714 /* Vendor.swift */; };
 		998FB5FB1CA051E100C49714 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998FB5FA1CA051E100C49714 /* Car.swift */; };
+		99E39F601CD0AF230029A829 /* AddCarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E39F5F1CD0AF230029A829 /* AddCarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		998FB5F51CA051B100C49714 /* Vendor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Vendor+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		998FB5F61CA051B100C49714 /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 		998FB5FA1CA051E100C49714 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		99E39F5F1CD0AF230029A829 /* AddCarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCarController.swift; sourceTree = "<group>"; };
 		A015740B48D50A3E2AD89943 /* Pods-MFS-Demo-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFS-Demo-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-MFS-Demo-Client/Pods-MFS-Demo-Client.release.xcconfig"; sourceTree = "<group>"; };
 		B90FA24BF8FC8B11C3FAF889 /* Pods_MFS_Demo_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MFS_Demo_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 			children = (
 				992F46C11CAA86AA00D6F8D5 /* VendorViewController.swift */,
 				992F46C31CAA86BD00D6F8D5 /* CarViewController.swift */,
+				99E39F5F1CD0AF230029A829 /* AddCarController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				998FB5FB1CA051E100C49714 /* Car.swift in Sources */,
 				990C61041CC0CCFB0068E78F /* ReachabilityUtil.swift in Sources */,
 				998FB5D01CA011A900C49714 /* AppDelegate.swift in Sources */,
+				99E39F601CD0AF230029A829 /* AddCarController.swift in Sources */,
 				992F46C41CAA86BD00D6F8D5 /* CarViewController.swift in Sources */,
 				998FB5F91CA051B100C49714 /* Vendor.swift in Sources */,
 				992F46C21CAA86AA00D6F8D5 /* VendorViewController.swift in Sources */,

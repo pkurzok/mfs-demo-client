@@ -8,7 +8,8 @@ target 'MFS-Demo-Client' do
  	pod 'Alamofire', '~> 3'
     pod 'MagicalRecord', '~> 2'
     pod 'Reachability', '~> 3'
-    pod 'KeychainAccess', '~> 2' 
+    pod 'KeychainAccess', '~> 2'
+    pod 'Eureka', '~> 1.5'
 
 end
 

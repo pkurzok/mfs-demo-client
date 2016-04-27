@@ -34,9 +34,6 @@ class CarViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    @IBAction func createCarPressed(sender: AnyObject) {
-        self.showAlertView()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,42 +45,21 @@ class CarViewController: UIViewController {
             print("\(fetchError), \(fetchError.userInfo)")
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        super.prepareForSegue(segue, sender: sender)
+        
+        if "addCar" == segue.identifier {
+            
+            if let vc = segue.destinationViewController as? AddCarController {
+                vc.vendor = self.vendor
+            }
+        }
+    }
 }
 
 extension CarViewController {
-    
-    private func showAlertView() {
-        let alertController = UIAlertController(title: "Create Car", message: nil, preferredStyle: .Alert)
-        
-        let createAction = UIAlertAction(title: "Create", style: .Default) { (_) in
-            
-            if let
-                brand = alertController.textFields?[0].text,
-                model = alertController.textFields?[1].text,
-                color = alertController.textFields?[2].text,
-                horsepower = alertController.textFields?[3].text,
-                year = alertController.textFields?[4].text
-            {
-                if let vendor = self.vendor {
-                    
-                    SyncUtil().createCarForVendor(vendor, brand: brand, model: model, color: color, horsepower: horsepower, year: year)
-                }
-            }
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (_) in }
-        
-        alertController.addTextFieldWithPlaceHolder("Brand")
-        alertController.addTextFieldWithPlaceHolder("Model")
-        alertController.addTextFieldWithPlaceHolder("Color")
-        alertController.addTextFieldWithPlaceHolder("Horsepower")
-        alertController.addTextFieldWithPlaceHolder("Year")
-        
-        alertController.addAction(createAction)
-        alertController.addAction(cancelAction)
-        
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }
     
     private func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         // Fetch Record
@@ -107,16 +83,6 @@ extension CarViewController {
         else {
             cell.detailTextLabel?.text = ""
         
-        }
-    }
-}
-
-extension UIAlertController {
-    
-    func addTextFieldWithPlaceHolder(placeHolder: String) {
-        
-        self.addTextFieldWithConfigurationHandler { (textField) in
-            textField.placeholder = placeHolder
         }
     }
 }

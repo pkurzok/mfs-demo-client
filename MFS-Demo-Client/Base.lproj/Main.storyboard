@@ -128,7 +128,7 @@
                     <navigationItem key="navigationItem" title="Cars" id="DP6-dF-Hjg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="z1q-ML-jOE">
                             <connections>
-                                <action selector="createCarPressed:" destination="uln-S5-H93" id="ZaK-Ue-ZZZ"/>
+                                <segue destination="J2G-o0-N0a" kind="show" identifier="addCar" id="WAB-0s-ho1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -139,6 +139,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uob-RC-ifN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2045" y="451"/>
+        </scene>
+        <!--Add Car Controller-->
+        <scene sceneID="qAY-oy-Y0b">
+            <objects>
+                <viewController id="J2G-o0-N0a" customClass="AddCarController" customModule="MFS_Demo_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Xt-Hf-Lfg"/>
+                        <viewControllerLayoutGuide type="bottom" id="HCB-sd-dvR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pgn-ts-8pi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MuQ-Ig-NYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="451"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BRM-3R-MFd">
